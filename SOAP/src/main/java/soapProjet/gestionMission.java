@@ -20,8 +20,9 @@ public class gestionMission {
 	}
 	
 	@WebMethod(operationName="refuseMission")
-	public void RefuseMission(@WebParam(name="mission")missionAide mission) {
+	public void RefuseMission(@WebParam(name="mission")missionAide mission,@WebParam(name="commentaire")String commentaire) {
 		mission.StateRefuse();
+		mission.setComment(commentaire);
 		mission.toString();
 	}
 
